@@ -1,0 +1,8 @@
+img.pfp {
+  max-height: clamp(15rem, 5.5svw, 30rem);
+}
+
+.fi.fi-es {
+  background-size: cover;
+  width: 100%;
+}

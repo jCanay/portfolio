@@ -1,0 +1,44 @@
+@property --btn-bg-color {
+  syntax: "<color>";
+  initial-value: #5555;
+  inherits: false;
+}
+@property --btn-bg-hover-color {
+  syntax: "<color>";
+  initial-value: #5555;
+  inherits: false;
+}
+
+.button {
+  display: flex;
+  text-wrap: nowrap;
+  background: linear-gradient(
+    to top,
+    var(--btn-bg-color),
+    var(--btn-bg-hover-color)
+  );
+  /* border: 1px solid #888; */
+  border-radius: 1rem;
+
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  transition: --btn-bg-hover-color 150ms ease-out;
+
+  &:hover {
+    --btn-bg-hover-color: #555f;
+  }
+
+  /* &::after {
+    --btn-border-width: 1px;
+    z-index: -1;
+    content: "";
+    background-clip: 2px;
+    position: absolute;
+    top: calc(-1 * var(--btn-border-width));
+    left: calc(-1 * var(--btn-border-width));
+    border-radius: calc(1rem + var(--btn-border-width));
+    width: calc(100% + var(--btn-border-width) * 2);
+    height: calc(100% + var(--btn-border-width) * 2);
+    background-color: #fff;
+  } */
+}
