@@ -1,0 +1,15 @@
+{
+  "header": {
+    "subtitle": "Software developer",
+    "language_switch": "English"
+  },
+  "section1": {
+    "title": "About me",
+    "p": ""
+  },
+  "links": {
+    "contact": "Contact",
+    "about": "About me",
+    "projects": "Projects"
+  }
+}

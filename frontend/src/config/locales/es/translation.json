@@ -1,0 +1,16 @@
+{
+  "test": "prueba",
+  "header": {
+    "subtitle": "Desarrollador de software",
+    "language_switch": "Español"
+  },
+  "section1": {
+    "title": "Sobre mí",
+    "p": ""
+  },
+  "links": {
+    "contact": "Contacto",
+    "about": "Sobre mí",
+    "projects": "Proyectos"
+  }
+}
