@@ -1,40 +1,17 @@
-import profileImg from "../assets/profile.jpeg";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 import "./homepage.css";
-import LanguageButton from "../components/LanguageButton";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
+import i18n from "../../config/i18n";
+import JHeader from "../../components/home/JHeader";
 
 export default function Homepage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <>
-      <header className="relative p-4 bg-pink-200/10 gap-8 md:flex sm:grid sm:grid-rows-3 [&>div]:flex">
-        <img
-          className="pfp rounded-full"
-          src={profileImg}
-          alt="Mi foto de perfil"
-        />
-        <div className="flex flex-col text-left w-full">
-          <h1 className="mr-10">Jaime Canay Agho</h1>
-          <h3 className="uppercase">{t("header.subtitle")}</h3>
-          <ul className="flex mt-auto">
-            <li>
-              <button>Link</button>
-            </li>
-            <li>
-              <button>Link</button>
-            </li>
-            <li>
-              <button>Link</button>
-            </li>
-            <li>
-              <button>Link</button>
-            </li>
-          </ul>
-        </div>
-        <LanguageButton />
-      </header>
+      <JHeader />
       <div className="flex mt-8 mb-8 gap-8">
         <aside className="bg-pink-200/10 p-4 self-start sticky top-8">
           <ul className="flex flex-col text-nowrap gap-4 [&_li]:active:bg-pink-200/50 [&_li]:hover:bg-pink-200/50 [&_li]:hover:text-black [&_a]:px-4 [&_a]:py-2 [&_li]:flex [&_a]:min-w-48">
@@ -68,6 +45,9 @@ export default function Homepage() {
               trabajo para tener precisión y control sobre el desarrollo del
               proyecto.
             </p>
+          </article>
+          <article>
+            <button onClick={() => navigate("/projects")}>Projectos</button>
           </article>
           {/* <article>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia

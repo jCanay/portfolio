@@ -1,0 +1,35 @@
+{
+  "fullName": "Jaime Canay Agho",
+  "occupation": {
+    "es": "Desarrollador de Software",
+    "us": "Software Developer"
+  },
+  "birthDate": "21",
+  "description": [
+    {
+      "es": "",
+      "us": ""
+    },
+    {
+      "es": "",
+      "us": ""
+    }
+  ],
+  "media": [
+    {
+      "name": "GitHub",
+      "url": "",
+      "icon": ""
+    },
+    {
+      "name": "InfoJobs",
+      "url": "",
+      "icon": ""
+    },
+    {
+      "name": "LinkedIn",
+      "url": "",
+      "icon": ""
+    }
+  ]
+}
