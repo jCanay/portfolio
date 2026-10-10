@@ -24,9 +24,12 @@
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
+  interpolate-size: allow-keywords;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* scroll-padding-top: 3em; */
+  scroll-behavior: smooth;
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -59,7 +62,7 @@ body {
   margin: 0 auto;
   padding: clamp(1em, 3.5vw, 2em);
   text-align: center;
-  border-inline: 1px solid var(--border);
+  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;

@@ -1,3 +1,15 @@
+const defaultConfig = {
+  w: "10rem",
+  h: "3rem",
+  radius: "0.5rem",
+  variant: "dark",
+};
+
+const bgColor = {
+  dark: "bg-gray-500",
+  light: "",
+};
+
 /**
  * @param {Object} props
  * @param {string} [props.w]
@@ -7,20 +19,16 @@
  *
  */
 export default function JSkeleton({
-  w = "unset",
-  h = "unset",
-  radius = "unset",
-  variant = "dark",
+  w = defaultConfig.w,
+  h = defaultConfig.h,
+  radius = defaultConfig.radius,
+  variant = defaultConfig.variant,
   ...props
 }) {
-  const bgColor = {
-    dark: "bg-gray-500",
-    light: "",
-  };
   return (
     <div
-      className={"rounded-sm bg-gray-500"}
-      style={`width: ${w}; height: ${h}; border-radius: ${radius}`}
+      className={`rounded-sm ${bgColor[variant]}`}
+      style={{ width: w, height: h, borderRadius: radius }}
     />
   );
 }

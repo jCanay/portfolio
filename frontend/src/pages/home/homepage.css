@@ -1,3 +1,9 @@
+@property --mask-color {
+  syntax: "<color>";
+  initial-value: #0000;
+  inherits: false;
+}
+
 img.pfp {
   max-height: clamp(15rem, 5.5svw, 30rem);
 }
@@ -6,4 +12,32 @@ img.pfp {
   background-size: cover;
   width: 100%;
   border-radius: 0.125rem;
+}
+
+[class*="projectsSection"] {
+  & > ul {
+    transition: --mask-color 200ms linear;
+    mask-image: linear-gradient(to bottom, black 75%, var(--mask-color) 100%);
+  }
+}
+
+/* Controls the expand of the projects section */
+:root:has([class*="projectsSection"] #show-more:checked)
+  [class*="projectsSection"] {
+  & label {
+    transform: translateY(-0rem);
+    position: relative;
+
+    & svg {
+      rotate: 180deg;
+    }
+  }
+
+  & > ul {
+    interpolate-size: allow-keywords;
+    /* background-color: #fff; */
+    --mask-color: #000f;
+    max-height: 100%;
+    overflow-y: visible;
+  }
 }

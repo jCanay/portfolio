@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./Button.module.css";
 
-export default function Button({ children, onClick, className, initialState }) {
+export default function JButton({
+  children,
+  onClick = Function,
+  className,
+  initialState,
+}) {
   const [clicked, setClicked] = useState(false);
 
   useEffect(() => {

@@ -1,0 +1,11 @@
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  scroll-padding-top: 5rem;
+
+  & h2 {
+    font-size: 24pt;
+    font-weight: 500;
+  }
+}

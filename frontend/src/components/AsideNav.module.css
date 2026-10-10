@@ -1,0 +1,17 @@
+.asideNav {
+  & ul {
+    & li {
+      & a {
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: color-mix(
+            in oklab,
+            oklch(8.2% 0.059 254.128) 20%,
+            transparent
+          );
+        }
+      }
+    }
+  }
+}

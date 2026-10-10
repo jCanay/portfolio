@@ -1,0 +1,18 @@
+.jchip {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 11pt;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5rem;
+  background-color: color-mix(
+    in oklab,
+    oklch(8.2% 0.059 254.128) 20%,
+    transparent
+  );
+
+  & svg {
+    height: 1rem;
+    aspect-ratio: 1;
+  }
+}

@@ -1,11 +1,19 @@
 @property --btn-bg-color {
   syntax: "<color>";
-  initial-value: #5555;
+  initial-value: color-mix(
+    in oklab,
+    oklch(88.2% 0.059 254.128) 10%,
+    transparent
+  );
   inherits: false;
 }
 @property --btn-bg-hover-color {
   syntax: "<color>";
-  initial-value: #5555;
+  initial-value: color-mix(
+    in oklab,
+    oklch(88.2% 0.059 254.128) 10%,
+    transparent
+  );
   inherits: false;
 }
 
@@ -17,15 +25,27 @@
     var(--btn-bg-color),
     var(--btn-bg-hover-color)
   );
-  border: 1px solid #888;
+  border: 1px solid
+    color-mix(in oklab, oklch(88.2% 0.059 254.128) 15%, transparent);
   border-radius: 10rem;
 
   /* padding: 0.25rem; */
   cursor: pointer;
-  transition: --btn-bg-hover-color 150ms ease-out;
+  transition:
+    --btn-bg-hover-color 150ms ease-out,
+    scale 75ms ease-out;
 
   &:hover {
-    --btn-bg-hover-color: #555f;
+    scale: 1.05;
+    --btn-bg-hover-color: color-mix(
+      in oklab,
+      oklch(88.2% 0.059 254.128) 15%,
+      transparent
+    );
+  }
+
+  &:active {
+    scale: 0.95;
   }
 
   /* &::after {

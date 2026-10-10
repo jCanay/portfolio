@@ -18,18 +18,13 @@
   "media": [
     {
       "name": "GitHub",
-      "url": "",
-      "icon": ""
-    },
-    {
-      "name": "InfoJobs",
-      "url": "",
-      "icon": ""
+      "url": "https://github.com/jCanay",
+      "icon": "github"
     },
     {
       "name": "LinkedIn",
       "url": "",
-      "icon": ""
+      "icon": "linkedin"
     }
   ]
 }
